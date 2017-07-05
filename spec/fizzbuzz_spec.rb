@@ -1,33 +1,39 @@
 require 'fizzbuzz'
 
 describe 'fizzbuzz' do
-
-  it 'returns "fizz" when passed 3' do
-    expect(fizzbuzz(3)).to eq 'fizz'
+  it 'returns "fizz" when passed a multiple of 3' do
+    (3..300).each do |n|
+      if n % 3 == 0 && n % 5 != 0
+        expect(fizzbuzz(n)).to eq 'fizz'
+      end
+    end
   end
 
-  it 'returns "buzz" when passed 5' do
-    expect(fizzbuzz(5)).to eq 'buzz'
+  it 'returns "buzz" when passed a multiple of 5' do
+    (3..300).each do |n|
+      if n % 5 == 0 && n % 3 != 0
+        expect(fizzbuzz(n)).to eq 'buzz'
+      end
+    end
   end
 
-  it 'returns "fizzbuzz" when passed 15' do
-    expect(fizzbuzz(15)).to eq 'fizzbuzz'
+  it 'returns "fizzbuzz" when passed a multiple of 3 and 5' do
+    (3..300).each do |n|
+      if n % 5 == 0 && n % 3 == 0
+        expect(fizzbuzz(n)).to eq 'fizzbuzz'
+      end
+    end
   end
 
-  it 'returns "buzz" when passed 40' do
-    expect(fizzbuzz(40)).to eq 'buzz'
+  it 'returns the integer passed to it if it is not a multiple of 3 or 5' do
+    (3..300).each do |n|
+      if n % 5 != 0 && n % 3 != 0
+        expect(fizzbuzz(n)).to eq n
+      end
+    end
   end
 
-  it 'returns "fizz" when passed 99' do
-    expect(fizzbuzz(99)).to eq 'fizz'
+  it 'returns the string passed to it' do
+    expect(fizzbuzz('')).to eq ''
   end
-
-  it 'returns 8 when passed 8' do
-    expect(fizzbuzz(8)).to eq 8
-  end
-
-  it 'returns word when passed word' do
-    expect(fizzbuzz('word')).to eq 'word'
-  end
-
 end
