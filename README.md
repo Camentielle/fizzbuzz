@@ -1,11 +1,11 @@
-# fizzbuzz
+# TDD and pair programming over Fizzbuzz
 
 The "Fizz-Buzz test" is an interview question designed to help filter out the 99.5% of programming job candidates who can't seem to program their way out of a wet paper bag. The text of the programming assignment is as follows:
 > "Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”."
 
 [http://wiki.c2.com/](http://wiki.c2.com/?FizzBuzzTest)
 
-As part of our Makers Academy training, we used the FizzBuzz test to introduce us to two concepts:
+As part of our Makers Academy training, the FizzBuzz test was used to introduce us to two concepts:
 1. Test Driven Development (TDD)
 1. Pair Programming
 
